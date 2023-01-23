@@ -29,8 +29,8 @@ $colorAccentYellow: #FFD247
 .overflowX-hidden
     overflow: hidden
 html
-    font-size: 0.75px
-    +media(565)
+    font-size: 0.6px
+    +media(680)
         font-size: 1px
 body
     font-family: 'Poppins', sans-serif
@@ -50,7 +50,7 @@ img
 .wrapper
     padding: 90rem 0
     margin: 0 auto
-    max-width: 94%
+    max-width: 90%
     +media(1170)
         max-width: 1140rem
 .flex
@@ -94,9 +94,13 @@ img
     top: 0
     right: 0
     height: 100vh
-    width: 800rem
-    transform: translateX(50%)
+    width: 100vh
+    transform: translateX(85%)
     background-color: $colorAccentBlue
+    +media(470)
+        transform: translateX(75%)
+    +media(576)
+        transform: translateX(50%)
 .circle1
     top: 0
     left: 0
@@ -108,11 +112,18 @@ img
     height: 100rem
     top: 30%
     left: 10%
+    display: none
+    +media(576)
+        display: block
+
 .circle3
     width: 130rem
     height: 130rem
     top: 30%
     left: 40%
+    display: none
+    +media(470)
+        display: block
 .home-container
     padding: 0
     height: 100vh
@@ -159,7 +170,9 @@ img
     justify-content: space-between
     align-items: center
     .home-title 
-        margin-right: 100rem
+        +media(680)
+            margin-right: 100rem
+
     h1
         margin-bottom: 30rem
         font-style: normal
@@ -177,7 +190,10 @@ img
         line-height: 125%
         color: $mainGray
     .home-illustration
+        display: none
         max-width: 546rem
+        +media(680)
+            display: block
 .about
     background: url('../img/LineBackground.png') 50% 50% no-repeat #1E1E1E
     h2
@@ -206,9 +222,12 @@ img
 
 .about-content
     padding-top: 50rem
+    flex-direction: column
     justify-content: space-between
     align-items: center
     gap: 60rem
+    +media(576)
+        flex-direction: row
     .about-text
         font-size: 16rem
         line-height: 32rem
@@ -218,12 +237,22 @@ img
     p
         opacity: 0.5
     img
-        max-width: 40%
+        max-width: 90%
+        // order: -1
+        +media(576)
+            order: 0
+            max-width: 40%
+        
 .technology
     .wrapper
         justify-content: space-between
+        flex-direction: column
+        gap: 40rem
+        +media(464)
+            flex-direction: row
 .technology-text
-    max-width: 305rem
+    +media(464)
+        max-width: 305rem
     .title
         font-size: 75rem
         line-height: 100%
@@ -244,8 +273,10 @@ img
         background-color: #26d014
         box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%)  
 .technology-slider 
-    width: 680rem
+    margin: 0 auto
+    width: 100%
     padding-bottom: 70rem
+    
 
 .slider-item
     padding: 50rem 10rem 10rem
@@ -297,11 +328,11 @@ img
     &::before
         content: ""
         position: absolute
-        width: 10px
-        height: 10px
-        border-right: 2px solid $cardWhite
-        border-bottom: 2px solid $cardWhite
-        border-radius: 1px
+        width: 10rem
+        height: 10rem
+        border-right: 2rem solid $cardWhite
+        border-bottom: 2rem solid $cardWhite
+        border-radius: 1rem
         top: 50%
         left: 50%
         transform: translate(-50%, -50%) rotate(135deg)
@@ -382,7 +413,9 @@ img
 .contact-form
     background: url('../img/LineBackground.png') 50% 50% no-repeat #1E1E1E
     .wrapper
-        padding-bottom: 230rem
+        padding-bottom: 20%
+        +media(1140)
+            padding-bottom: 230rem
     .title
         padding-bottom: 50rem
         text-align: center
@@ -420,17 +453,21 @@ form
 .footer-illustration
     position: absolute
     max-width: 1240rem
+    width: 95%
     top: 0
     left: 50%
     transform: translate(-50%, -50%)
     pointer-events: none
 .copyright
-    margin-top: 280rem
+    margin-top: 30%
     justify-content: space-between
     color: $mainGray
     font-size: 14rem
     padding: 20rem 0 10rem
     border-top: 1px solid #E3E6E9
+    +media(1140)
+        margin-top: 320rem
+
 
   
 
