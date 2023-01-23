@@ -1,0 +1,155 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scelable=yes, maximum-scale=3.0, minimum-scale=1.0")
+        title Olga Shutyleva
+        link(rel="stylesheet", href="css/styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    body 
+        .overflowX-hidden
+            main
+                section.home.rectangle.relative#homePage
+                    span.circle.big-blue
+                    span.circle.circle1
+                    span.circle.circle2
+                    span.circle.circle3
+                    .home-container.relative.wrapper
+                        .header.flex
+                            a.logo(href="index.html")
+                                img(src="img/logo.png", alt="")
+                            .menu-icon
+                                span 
+                            nav.menu-body
+                                ul.flex
+                                    li
+                                        a.menu-link.relative(href="#") Home
+                                    li
+                                        a.menu-link.relative(href="#") About
+                                    li
+                                        a.menu-link.relative(href="#") Technology
+                                    li 
+                                        a.menu-link.relative(href="#") Portfolio
+                        .home-content.flex
+                            .home-title 
+                                h1.title Hello I`m Olga
+                                    span .
+                                p I`m front-end developer.
+                                a.button(href="#about") About
+                            .home-illustration
+                                img(src="img/illustration.png", alt="")
+                section.about#about.rectangle
+                    .wrapper 
+                        h2.title About me
+                        .about-content.flex 
+                            .about-text 
+                                p Hello, my name is Olga Shutyleva. I am a front-end developer. Last year I studied at the "Hashtag-academy" school on the front-end developer. Looking for an entry-level position at a great company to be hard-working, to learn, grow and develop long-term. Please, look at my resume, see my skills, some of my works.
+                                h3.title EDUCATION
+                                p - Ukrainian state university of railway transport, educational program: "Network technologies and computer equipment"
+                                p - V. N. Karazin Kharkiv National University, educational program: "Management of Financial and Economic Security"
+                                p - "Hastag academy", educational program: "Front-end developer"
+                            img(src="img/my-photo.png", alt="")
+                section.technology#technology.rectangle
+                    span.circle
+                    .wrapper.flex
+                        .technology-text
+                            p.sub-title Technology
+                            h2.title Tools I Use
+                            p.description For more information, here is the link to the github.
+                            a.button(href="https://github.com/shytuleva24") GitHub 
+                        .technology-slider
+                            ul.slider-container
+                                li.slider-item
+                                    .item-img 
+                                        img(src="img/Markup.png", alt="")
+                                    .item-description 
+                                        h3.title Markup 
+                                        p HTML, CSS, SASS, SCSS, Pug, Semantic, W3C Valid, BEM.
+                                li.slider-item
+                                    .item-img 
+                                        img(src="img/Frameworks.png", alt="")
+                                    .item-description 
+                                        h3.title UI-Frameworks 
+                                        p Bootstrap 3, 4, 5
+                                li.slider-item
+                                    .item-img 
+                                        img(src="img/JavaScript.png", alt="")
+                                    .item-description 
+                                        h3.title JavaScript
+                                        p JavaScript Vanilla JS, React, jQury
+                                li.slider-item
+                                    .item-img 
+                                        img(src="img/Control.png", alt="")
+                                    .item-description 
+                                        h3.title Control Version System
+                                        p GitHub, GitLab, Bitbucket
+                                //- li.slider-item
+                                //-     .item-img 
+                                //-         img(src="img/Speed.png", alt="")
+                                //-     .item-description 
+                                //-         h3.title Speed Optimization
+                                //-         p Google pages speed insights to 100%
+                                //- li.slider-item
+                                //-     .item-img 
+                                //-         img(src="img/ContentManagement.png", alt="")
+                                //-     .item-description 
+                                //-         h3.title Content Management
+                                //-         p WordPress
+                section.portfolio#portfolio.rectangle.relative
+                    span.circle
+                    .wrapper.relative
+                        .illustration
+                            img(src="img/illustrationPortfolio.png", alt="")
+                        .portfolio-text
+                            p.sub-title Showcase
+                            h2.title Recent Works
+                            //- p.portfolio-description I will help to develop your best project based on your idea.
+                        .works-slider
+                            ul.slider-container
+                                li.slider-item
+                                    .item-img 
+                                        img(src="img/startup.jpg", alt="")
+                                    .item-description 
+                                        h3.title Startup 
+                                        h4.sub-title Tools I use:
+                                        p.tehnology-use Sass/Pug, Vanilla JS
+                                        p.site-descr Responsive carousel with many settings, a small online store, various animations, parallax, zoom inside the image, popup.
+                                        a.button(href="https://shytuleva24.github.io/startup/") Detail
+                                li.slider-item
+                                    .item-img 
+                                        img(src="img/repair.jpg", alt="")
+                                    .item-description 
+                                        h3.title Repair design 
+                                        h4.sub-title Tools I use:
+                                        p.tehnology-use Sass/Pug, BEM, jQuery
+                                        p.site-descr Responsive layout, carousel fade effect, various animations.
+                                        a.button(href="https://shytuleva24.github.io/REPAIR-DESIGN-PROJECT/") Detail
+                                li.slider-item
+                                    .item-img 
+                                        img(src="img/sea.jpg", alt="")
+                                    .item-description 
+                                        h3.title Sea
+                                        h4.sub-title Tools I use:
+                                        p.tehnology-use Sass/Pug, Bootstrap
+                                        p.site-descr Only responsive layout without JS, css animation, various hover effects, bootstrap.
+                                        a.button(href="https://shytuleva24.github.io/sea/") Detail
+                section.contact-form#form.relative
+                    .wrapper.relative
+                        h2.title Lets Get In Touch
+                        form.flex(action="index.html", method="post") 
+                            input(type="text" placeholder='First name:')
+                            input(type="email", name="" placeholder='E-mail adsress:') 
+                            textarea(id='textarea' placeholder="Message:" )
+                            button.button(type="submit") Submit
+                section.fut-ill.relative
+                    .footer-illustration
+                        img(src="img/footerIllustration.png", alt="")
+                section.footer.relative
+                    .copyright.flex.wrapper
+                        p © copyright 2023
+                        a(href="#home") Up
+
+    script(src="js/scripts.js") 

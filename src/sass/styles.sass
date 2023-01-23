@@ -1,0 +1,421 @@
+// Colors
+
+// Main
+$mainLime: #13CC00
+$mainLimeGreen: #388E3C
+$mainGrayBlue: #292930
+$mainGray: #737373
+
+// Cards
+$cardLightPeriwinkle: #ECF2F6
+$cardWhite: #FFFFFF
+$cardGrayBlue: #292930
+$cardMediumSeaGreen: #27B674
+
+// colorAccent
+$colorAccentBlue: #4947E5
+$colorAccentYellow: #FFD247
+
+
+=media ($size)
+    @media screen and (min-width: #{$size}px)
+        @content
+
+*, *:before, *:after 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+.overflowX-hidden
+    overflow: hidden
+html
+    font-size: 0.75px
+    +media(565)
+        font-size: 1px
+body
+    font-family: 'Poppins', sans-serif
+    font-size: 14rem
+
+body.lock
+    overflow: hidden
+ul
+    list-style: none
+a
+    display: inline-block
+    text-decoration: none
+img
+    width: 100%
+    vertical-align: bottom
+
+.wrapper
+    padding: 90rem 0
+    margin: 0 auto
+    max-width: 94%
+    +media(1170)
+        max-width: 1140rem
+.flex
+    display: flex
+.title
+    font-family: 'DM Sans'
+    font-weight: 500
+.sub-title
+    margin-bottom: 28rem
+    font-family: 'DM Sans'
+    font-weight: 700
+    font-size: 21rem
+    line-height: 99.33%
+    letter-spacing: -0.025em
+    color: #43B181
+
+
+.relative
+    position: relative 
+.rectangle
+    &::after
+        content: ""
+        position: absolute
+        background: url('../img/Rectangle.png')
+        background-blend-mode: overlay
+        opacity: .2
+        z-index: 100
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        pointer-events: none
+
+.circle
+    position: absolute
+    background: url('../img/Rectangle.png')
+    border-radius: 50%
+    z-index: 0
+    background-color: $colorAccentYellow
+
+.big-blue
+    height: 100%
+    top: 0
+    right: 0
+    height: 100vh
+    width: 800rem
+    transform: translateX(50%)
+    background-color: $colorAccentBlue
+.circle1
+    top: 0
+    left: 0
+    width: 400rem
+    height: 400rem
+    transform: translate(-50%, -50%)
+.circle2
+    width: 100rem
+    height: 100rem
+    top: 30%
+    left: 10%
+.circle3
+    width: 130rem
+    height: 130rem
+    top: 30%
+    left: 40%
+.home-container
+    padding: 0
+    height: 100vh
+.header
+    padding: 40rem 0
+    margin-bottom: 70rem
+    align-items: center
+    gap: 40rem
+.menu-body
+    ul
+        gap: 40rem
+.menu-link
+    padding: 5rem
+    font-weight: 500
+    font-size: 18rem
+    line-height: 27rem
+    color: $mainGray
+    transition: all .5s ease-in-out
+    &::after
+        content: ""
+        position: absolute
+        width: 0%
+        height: 2px
+        border-radius: 1px
+        bottom: 0
+        left: 0
+        background-color: $mainLime
+        transition: all .5s ease-in-out
+    &:hover
+        color: $mainGrayBlue
+    &:hover:after
+        width: calc(100% + 17rem)
+
+.logo
+    width: 100rem
+
+
+.home-content
+    position: absolute
+    width: 100%
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    justify-content: space-between
+    align-items: center
+    .home-title 
+        margin-right: 100rem
+    h1
+        margin-bottom: 30rem
+        font-style: normal
+        font-weight: 700
+        font-size: 100rem
+        line-height: 87.33%
+        color: $mainGrayBlue
+        letter-spacing: -0.025em
+        span 
+            color: $mainLime
+            font-size: 150rem
+    p
+        margin-bottom: 50rem
+        font-size: 24rem
+        line-height: 125%
+        color: $mainGray
+    .home-illustration
+        max-width: 546rem
+.about
+    background: url('../img/LineBackground.png') 50% 50% no-repeat #1E1E1E
+    h2
+        font-weight: 500
+        font-size: 80rem
+        line-height: 100%
+        letter-spacing: -0.025em
+        color: #FFFFFF
+.about-content
+    padding-top: 50rem
+    justify-content: space-between
+    align-items: center
+    gap: 60rem
+    .about-text
+        font-size: 16rem
+        line-height: 32rem
+        color: #FFFFFF
+    h3
+        padding: 15rem 0
+    p
+        opacity: 0.5
+    img
+        max-width: 40%
+.technology
+    .wrapper
+        justify-content: space-between
+.technology-text
+    max-width: 305rem
+    .title
+        font-size: 75rem
+        line-height: 100%
+        letter-spacing: -0.025em
+        color: $mainGrayBlue
+.button
+    color: #fff
+    font-size: 18rem
+    line-height: 27rem
+    letter-spacing: -0.04em
+    padding: 17rem 75rem
+    background-color: $mainLime
+    border-radius: 5rem
+    transition: all .3s ease-in-out
+    cursor: pointer
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%) 
+    &:hover
+        background-color: #26d014
+        box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%)  
+.technology-slider 
+    width: 680rem
+    padding-bottom: 70rem
+
+.slider-item
+    padding: 50rem 10rem 10rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: 15rem
+    min-height: 500rem
+    background-color: $cardLightPeriwinkle
+    border-radius: 10px
+    cursor: pointer
+    transition: all .5s ease-in-out
+    &:hover
+        box-shadow: 0 40px 20px -15px rgb(0 0 0 / 21%)
+        background-color: $cardMediumSeaGreen
+.item-description 
+    padding: 50rem 30rem
+    min-height: 270rem
+    background-color: $cardWhite
+    border-radius: 10px
+    h3
+        margin-bottom: 60rem
+        font-size: 30.3419rem
+        line-height: 100%
+        letter-spacing: -0.045em
+        color: $cardGrayBlue
+    p
+        font-size: 16rem
+        line-height: 23rem
+        letter-spacing: -0.025em
+        color: $mainGray
+.item-img
+    margin: 0 auto
+    max-width: 200rem
+
+.slider_navigation
+    position: absolute
+    width: 40rem
+    height: 40rem
+    border-radius: 50%
+    bottom: 0rem
+    left: 51%
+    background-color: #D0D0D2
+    transition: all .3s ease
+    z-index: 2
+    cursor: pointer
+    &:hover
+        background-color: $cardMediumSeaGreen
+    &::before
+        content: ""
+        position: absolute
+        width: 10px
+        height: 10px
+        border-right: 2px solid $cardWhite
+        border-bottom: 2px solid $cardWhite
+        border-radius: 1px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(135deg)
+        z-index: 3
+.right
+    &::before
+        transform: translate(-50%, -50%) rotate(-45deg)
+.left
+    transform: translateX(-130%)
+.portfolio
+    background: #ECF2F6
+    .flex
+        gap: 30rem
+    .circle
+        width: 200rem
+        height: 200rem
+        top: 20%
+        transform: translateX(-50%)
+.portfolio-text
+    margin-bottom: 65rem
+    .title
+        margin-bottom: 30rem
+        font-weight: 500
+        font-size: 80rem
+        line-height: 100%
+        letter-spacing: -0.025em
+        color: $cardGrayBlue
+    .portfolio-description
+        font-size: 21rem
+        line-height: 32rem
+        color: #999FAE
+.illustration
+    position: absolute
+    right: -150rem
+    top: 50%
+    transform: translateY(-50%)
+    opacity: 0.5    
+    max-width: 340rem
+    z-index: 0
+
+.works-slider
+    padding-bottom: 60rem
+    padding-top: 10rem
+    .slider-item
+        padding: 0
+        background-color: #fff
+        gap: 0
+        &:hover
+            scale: 1.01
+    .item-description
+        padding: 20rem
+        text-align: center
+    .title
+        text-align: left
+        margin-bottom: 15rem    
+    .sub-title
+        text-align: left
+        margin-bottom: 5rem
+        font-size: 18rem
+    p
+        text-align: left
+    .tehnology-use
+        font-style: italic
+        font-size: 14rem
+    .item-img
+        max-width: 100%
+    img
+        vertical-align: bottom
+        border-radius: 9px 9px 0 0
+    .site-descr
+        padding: 10rem 0 20rem
+        min-height: 100rem
+.description
+    padding: 24rem 0 39rem
+    font-size: 21rem
+    line-height: 32rem
+    color: $mainGray
+.contact-form
+    background: url('../img/LineBackground.png') 50% 50% no-repeat #1E1E1E
+    .wrapper
+        padding-bottom: 230rem
+    .title
+        padding-bottom: 50rem
+        text-align: center
+        font-size: 80rem
+        line-height: 100%
+        letter-spacing: -0.025em
+        color: #FFFFFF
+form
+    margin: 0 auto
+    max-width: 540rem
+    flex-direction: column
+    align-items: center
+    input,
+    textarea
+        background-color: transparent
+        width: 100%
+        margin-bottom: 50rem
+        padding: 10.5rem 17rem
+        font-size: 12rem
+        line-height: 20rem
+        outline: none
+        color: #fff
+        border: none
+        border-bottom: 1px solid $cardMediumSeaGreen
+        &:active
+            outline: none
+        &:focus
+            outline: none
+        &:focus-visible
+            border-bottom: 1px solid $cardMediumSeaGreen
+    textarea
+        resize: vertical
+        min-height: 50px
+        max-height: 150px
+.footer-illustration
+    position: absolute
+    max-width: 1240rem
+    top: 0
+    left: 50%
+    transform: translate(-50%, -50%)
+    pointer-events: none
+.copyright
+    margin-top: 280rem
+    justify-content: space-between
+    color: $mainGray
+    font-size: 14rem
+    padding: 20rem 0 10rem
+    border-top: 1px solid #E3E6E9
+
+  
+
+    
