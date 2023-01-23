@@ -43,7 +43,9 @@ html(lang="en")
                                 img(src="img/illustration.png", alt="")
                 section.about#about.rectangle
                     .wrapper 
-                        h2.title About me
+                        h2.title.relative About me
+                            span.circle-gray
+                            span.mincircle-gray
                         .about-content.flex 
                             .about-text 
                                 p Hello, my name is Olga Shutyleva. I am a frontend developer. Last year I studied at the Hashtag Academy school as a front-end developer. I am looking for an entry level position in a company to be hardworking, learn, grow and develop in the long term. Please see my CV, see my skills and some of my work.
@@ -106,7 +108,6 @@ html(lang="en")
                         .portfolio-text
                             p.sub-title Showcase
                             h2.title Recent Works
-                            //- p.portfolio-description I will help to develop your best project based on your idea.
                         .works-slider
                             ul.slider-container
                                 li.slider-item
@@ -138,7 +139,9 @@ html(lang="en")
                                         a.button(href="https://shytuleva24.github.io/sea/") Website
                 section.contact-form#form.relative
                     .wrapper.relative
-                        h2.title Lets Get In Touch
+                        h2.title.relative Lets Get In Touch
+                            span.circle-gray
+                            span.mincircle-gray
                         form.flex(action="index.html", method="post") 
                             input(type="text" placeholder='First name:')
                             input(type="email", name="" placeholder='E-mail adsress:') 
@@ -151,5 +154,4 @@ html(lang="en")
                     .copyright.flex.wrapper
                         p © copyright 2023
                         a(href="#home") Up
-
     script(src="js/scripts.js") 
