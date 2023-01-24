@@ -14,11 +14,11 @@ html(lang="en")
     body 
         .overflow-hidden
             main
-                section.home.rectangle.relative#homePage
+                section.home.rectangle.relative#homePage.parallax._anim-items
                     span.circle.big-blue
-                    span.circle.circle1
-                    span.circle.circle2
-                    span.circle.circle3
+                    span.circle.circle1.parallax-x
+                    span.circle.circle2.parallax-x
+                    span.circle.circle3.parallax-x
                     .home-container.relative.wrapper
                         .header.flex
                             //- a.logo(href="index.html")
@@ -43,10 +43,10 @@ html(lang="en")
                                     span .
                                 p I`m front-end developer.
                                 a.button.scroll-to(href="#about") About
-                            .home-illustration
+                            .home-illustration.parallax-y
                                 img(src="img/illustration.png", alt="")
-                section.about#about.rectangle
-                    .wrapper 
+                section.about#about.rectangle._anim-items._anim-no-hide
+                    .wrapper._anim-show._anim
                         h2.title.relative About me
                             span.circle-gray
                             span.mincircle-gray
@@ -58,9 +58,9 @@ html(lang="en")
                                 p - V. N. Karazin Kharkiv National University, educational program: "Management of Financial and Economic Security"
                                 p - "Hastag academy", educational program: "Front-end developer"
                             img(src="img/my-photo.png", alt="")
-                section.technology#technology.rectangle
+                section.technology#technology.rectangle._anim-items._anim-no-hide
                     span.circle
-                    .wrapper.flex
+                    .wrapper.flex._anim-show._anim
                         .technology-text
                             p.sub-title Technology
                             h2.title Tools I Use
@@ -104,9 +104,9 @@ html(lang="en")
                                 //-     .item-description 
                                 //-         h3.title Content Management
                                 //-         p WordPress
-                section.portfolio#portfolio.rectangle.relative
+                section.portfolio#portfolio.rectangle.relative._anim-items._anim-no-hide
                     span.circle
-                    .wrapper.relative
+                    .wrapper.relative._anim-show._anim
                         .illustration
                             img(src="img/illustrationPortfolio.png", alt="")
                         .portfolio-text
@@ -141,8 +141,8 @@ html(lang="en")
                                         p.tehnology-use Sass/Pug, Bootstrap
                                         p.site-descr Only responsive layout without JS, css animation, various hover effects, bootstrap.
                                         a.button(href="https://shytuleva24.github.io/sea/") Website
-                section.contact-form#form.relative
-                    .wrapper.relative
+                section.contact-form#form.relative._anim-items._anim-no-hide
+                    .wrapper.relative._anim-show._anim
                         h2.title.relative Lets Get In Touch
                             span.circle-gray
                             span.mincircle-gray
@@ -151,7 +151,7 @@ html(lang="en")
                             input(type="email", name="" placeholder='E-mail adsress:') 
                             textarea(id='textarea' placeholder="Message:" )
                             button.button(type="submit") Submit
-                section.fut-ill.relative
+                section.fut-ill.relative._anim-items._anim-no-hide
                     .footer-illustration
                         img(src="img/footerIllustration.png", alt="")
                 section.footer.relative

@@ -95,10 +95,10 @@ img
 
 .big-blue
     height: 100%
-    top: 0
+    bottom: 0
     right: 0
-    height: 100vh
-    width: 100vh
+    height: 85vh
+    width: 85vh
     transform: translateX(85%)
     background-color: $colorAccentBlue
     +media(470)
@@ -327,6 +327,7 @@ img
         color: $mainGray
     .home-illustration
         display: none
+        transition: all .1s linear
         // width: 40%
         max-width: 546rem
         +media(680)
@@ -339,6 +340,16 @@ img
         line-height: 100%
         letter-spacing: -0.025em
         color: #FFFFFF
+._anim
+    transition: all 1s ease-in-out
+    // opacity: 0
+    transform: translateY(20%)
+
+._active
+    ._anim-show
+        opacity: 1
+        transform: translateY(0)
+
 .circle-gray,
 .mincircle-gray
     position: absolute
