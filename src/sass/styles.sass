@@ -26,11 +26,15 @@ $colorAccentYellow: #FFD247
     padding: 0
     box-sizing: border-box
     
-.overflowX-hidden
+.overflow-hidden
     overflow: hidden
 html
     font-size: 0.6px
-    +media(680)
+    +media(576)
+        font-size: 0.7px
+    +media(768)
+        font-size: 0.8px
+    +media(992)
         font-size: 1px
 body
     font-family: 'Poppins', sans-serif
@@ -133,18 +137,144 @@ img
     align-items: center
     gap: 40rem
     justify-content: flex-end
+
+
 .menu-icon
-    display: none
+    z-index: 5
+    position: relative
+    width: 45rem
+    height: 25rem
+    cursor: pointer
+    span,
+    &::before,
+    &::after
+        left: 0
+        position: absolute
+        width: 100%
+        height: 15%
+        border-radius: 3rem
+        transition: all .3s ease
+        background-color: $mainGray
+    &::before,
+    &::after
+        content: ""
+        bottom: 0
+    &::before 
+        top: 0
+    &::after
+        width: 70%
+        left: 30%
+    span
+        top: 50%
+        transform: scale(1) translate(0, -50%)
+    +media(575)
+        display: none
+.menu-icon.open-menu span
+    transform: scale(0) translate(0, -50%)
+.menu-icon.open-menu:after 
+    bottom: 50%
+    width: 100%
+    left: 0
+    transform: rotate(45deg) translate(0, 50%)
+.menu-icon.open-menu:before 
+    top: 50%
+    transform: rotate(-45deg) translate(0, -50%)
+
 .menu-body
+    position: fixed
+    top: 0
+    left: 100%
+    width: 100%
+    height: 100%
+    background: rgba($cardWhite, 1)
+    padding: 110rem 30rem 30rem  
+    transition: left .3s ease
+    overflow: auto
+    +media(575)
+        background: transparent
+        position: static
+        padding: 0
+        width: auto
+        overflow: visible
+    // span
+    //     position: fixed
+    //     width: 100%
+    //     min-height: 70rem
+    //     top: 0
+    //     left: 0
+    //     transition: background-color .5s ease
+    //     z-index: 2
+    //     +media(768)
+    //         display: none
+.menu-illustration
+    width: 80%
+    +media(575)
+        display: none
+
+.menu-body.open-menu
+    z-index: 3
+    left: 0
+
+.menu-list
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    height: 100%
+    +media(575)
+        display: flex
+        align-items: center
+        flex-direction: row
+    li
+        margin-bottom: 35rem
+        // +media(768)
+        //     margin-right: 20px
+        //     margin-bottom: 0
+        // &:last-child
+        //     +media(768)
+        //         margin-right: 0
+        // +media(768)
+        //     padding: 10px 0
+// .menu-link
+//     padding: 5rem
+//     position: relative
+//     font-size: 24rem
+//     text-align: right
+//     transition: all .5s ease
+//     +media(768)
+//         font-size: 14rem
+//     &::after
+//         content: ''
+//         position: absolute
+//         margin: auto
+//         bottom: 0
+//         right: 0
+//         left: 0
+//         width: 0%
+//         background: #fff
+//         transition: all .5s ease
+//         height: 1px
+//     &:hover:after
+//         +media(768)
+//             width: 100%
+
+
+.menu-body
+    overflow: hidden
     ul
-        gap: 40rem
+        gap: 10rem
+        +media(575)
+            gap: 40rem
 .menu-link
     padding: 5rem
     font-weight: 500
-    font-size: 18rem
-    line-height: 27rem
+    font-size: 40rem
     color: $mainGray
+    z-index: 1
     transition: all .5s ease-in-out
+    +media(575)
+        line-height: 27rem
+        font-size: 18rem
     &::after
         content: ""
         position: absolute
@@ -158,9 +288,13 @@ img
     &:hover
         color: $mainGrayBlue
     &:hover:after
-        width: calc(100% + 17rem)
-.logo
-    width: 100rem
+        +media(575)
+            width: calc(100% + 17rem)
+
+// .logo
+//     width: 100rem
+
+
 .home-content
     position: absolute
     width: 100%
@@ -177,13 +311,15 @@ img
         margin-bottom: 30rem
         font-style: normal
         font-weight: 700
-        font-size: 100rem
+        font-size: 80rem
         line-height: 87.33%
         color: $mainGrayBlue
         letter-spacing: -0.025em
         span 
             color: $mainLime
             font-size: 150rem
+        +media(992)
+            font-size: 100rem
     p
         margin-bottom: 50rem
         font-size: 24rem
@@ -191,6 +327,7 @@ img
         color: $mainGray
     .home-illustration
         display: none
+        // width: 40%
         max-width: 546rem
         +media(680)
             display: block
@@ -450,6 +587,9 @@ form
         resize: vertical
         min-height: 50px
         max-height: 150px
+    button
+        border: none
+
 .footer-illustration
     position: absolute
     max-width: 1240rem

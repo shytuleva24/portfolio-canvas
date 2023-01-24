@@ -10,7 +10,7 @@ html(lang="en")
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     body 
-        .overflowX-hidden
+        .overflow-hidden
             main
                 section.home.rectangle.relative#homePage
                     span.circle.big-blue
@@ -23,22 +23,24 @@ html(lang="en")
                             //-     img(src="img/logo.png", alt="")
                             .menu-icon
                                 span 
-                            nav.menu-body
-                                ul.flex
+                            nav.menu-body.relarive
+                                ul.flex.menu-list
                                     li
-                                        a.menu-link.relative(href="#") Home
+                                        a.menu-link.relative.scroll-to(href="#homePage") Home
                                     li
-                                        a.menu-link.relative(href="#") About
+                                        a.menu-link.relative.scroll-to(href="#about") About
                                     li
-                                        a.menu-link.relative(href="#") Technology
+                                        a.menu-link.relative.scroll-to(href="#technology") Technology
                                     li 
-                                        a.menu-link.relative(href="#") Portfolio
+                                        a.menu-link.relative.scroll-to(href="#portfolio") Portfolio
+                                    li.menu-illustration
+                                        img(src="img/illustration.png", alt="")
                         .home-content.flex
                             .home-title 
                                 h1.title Hello I`m Olga
                                     span .
                                 p I`m front-end developer.
-                                a.button(href="#about") About
+                                a.button.scroll-to(href="#about") About
                             .home-illustration
                                 img(src="img/illustration.png", alt="")
                 section.about#about.rectangle
@@ -153,5 +155,5 @@ html(lang="en")
                 section.footer.relative
                     .copyright.flex.wrapper
                         p © copyright 2023
-                        a(href="#home") Up
+                        a.scroll-to(href="#homePage") Up
     script(src="js/scripts.js") 
