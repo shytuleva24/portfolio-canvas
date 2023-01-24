@@ -85,33 +85,33 @@ function animBlockInScroll() {
         }, 300)
     }
 }
-// parallaxEffect()
+parallaxEffect()
 
-// function parallaxEffect() {
-//     const parallax = document.querySelectorAll(".parallax");
-//     const parallaxX = document.querySelector(".parallax-x");
-//     const parallaxY = document.querySelector(".parallax-y");
+function parallaxEffect() {
+    const parallax = document.querySelectorAll(".parallax");
+    const parallaxX = document.querySelector(".parallax-x");
+    const parallaxY = document.querySelector(".parallax-y");
 
-//     function moveBackground(e) { // на комп
-//         let Y = e.pageY - window.pageYOffset - e.target.getBoundingClientRect().top + 1;
-//         let offsetX = (e.pageX / window.innerWidth * 5);
-//         let offsetY = (Y / window.innerHeight * 3);
-//         parallaxY.style.transform = `translate(${-offsetX}%, ${-offsetY}%)`;
-//         console.log(parallaxX);
-//         for (let i = 0; i < parallaxX.length; i++) {
-//             parallaxX[i].style.transform = `translate(${-offsetX}%, ${-offsetY}%)`;
-//             // console.log(element);
-//         }
-//         // parallaxX.forEach(element => {
-//         //     element.style.transform = `translate(${-offsetX}%, ${-offsetY}%)`;
-//         // });
-//     }
-//     parallax.forEach(element => {
-//         element.addEventListener("mousemove", function (e) {
-//             moveBackground(e);
-//         });
-//     });
-// }
+    function moveBackground(e) { // на комп
+        let Y = e.pageY - window.pageYOffset - e.target.getBoundingClientRect().top + 1;
+        let offsetX = (e.pageX / window.innerWidth * 5);
+        let offsetY = (Y / window.innerHeight * 3);
+        parallaxY.style.transform = `translate(${-offsetX}%, ${-offsetY}%)`;
+        // console.log(parallaxX);
+        // for (let i = 0; i < parallaxX.length; i++) {
+        //     parallaxX[i].style.transform = `translate(${-offsetX}%, ${-offsetY}%)`;
+        //     // console.log(element);
+        // }
+        // parallaxX.forEach(element => {
+        //     element.style.transform = `translate(${-offsetX}%, ${-offsetY}%)`;
+        // });
+    }
+    parallax.forEach(element => {
+        element.addEventListener("mousemove", function (e) {
+            moveBackground(e);
+        });
+    });
+}
 // function rand(min, max) {
 //     return Math.floor(Math.random() * (max - min + 1)) + min;
 // }
