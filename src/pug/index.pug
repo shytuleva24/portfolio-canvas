@@ -16,6 +16,7 @@ html(lang="en")
             main
                 section.home.rectangle.relative#homePage.parallax._anim-items
                     span.circle.big-blue
+                    canvas#drawingCanvas
                     span.circle.circle1.parallax-x
                     span.circle.circle2.parallax-x
                     span.circle.circle3.parallax-x
@@ -56,8 +57,9 @@ html(lang="en")
                                 h3.title EDUCATION
                                 p - Ukrainian state university of railway transport, educational program: "Network technologies and computer equipment"
                                 p - V. N. Karazin Kharkiv National University, educational program: "Management of Financial and Economic Security"
-                                p - "Hastag academy", educational program: "Front-end developer"
-                            img(src="img/my-photo.png", alt="")
+                                p - "Hashtag  academy", educational program: "Front-end developer"
+                            .my-photo.relative   
+                                img#photo(src="img/my-phot1.png", alt="")
                 section.technology#technology.rectangle._anim-items._anim-no-hide
                     span.circle
                     .wrapper.flex._anim-show._anim
@@ -146,10 +148,13 @@ html(lang="en")
                         h2.title.relative Lets Get In Touch
                             span.circle-gray
                             span.mincircle-gray
-                        form.flex(action="index.html", method="post") 
-                            input(type="text" placeholder='First name:')
-                            input(type="email", name="" placeholder='E-mail adsress:') 
-                            textarea(id='textarea' placeholder="Message:" )
+                        form.flex#form(action="#") 
+                            label(for="nameUser") 
+                                input#nameUser(type="text" name="name" placeholder='First name:')
+                            label(for="mailUser")
+                                input#mailUser(type="email" name="mail" placeholder='E-mail adsress:') 
+                            label(for="messageUser")
+                                textarea#messageUser(name="message" placeholder="Message:" )
                             button.button(type="submit") Submit
                 section.fut-ill.relative._anim-items._anim-no-hide
                     .footer-illustration

@@ -78,6 +78,8 @@ img
         position: absolute
         background: url('../img/Rectangle.png')
         background-blend-mode: overlay
+        background-repeat: no-repeat
+        background-size: cover
         opacity: .2
         z-index: 100
         width: 100%
@@ -105,6 +107,8 @@ img
         transform: translateX(75%)
     +media(576)
         transform: translateX(50%)
+    +media(1400)
+        display: none
 .circle1
     top: 0
     left: 0
@@ -257,6 +261,15 @@ img
 //     &:hover:after
 //         +media(768)
 //             width: 100%
+#drawingCanvas 
+    display: none
+    +media(1400)
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
 
 
 .menu-body
@@ -332,8 +345,12 @@ img
         max-width: 546rem
         +media(680)
             display: block
+        +media(1400)
+            display: none
 .about
-    background: url('../img/LineBackground.png') 50% 50% no-repeat #1E1E1E
+    background: url('../img/LineBackground.png') 50% 50% #1E1E1E
+    background-repeat: no-repeat
+    background-size: cover
     h2
         font-weight: 500
         font-size: 80rem
@@ -373,24 +390,33 @@ img
     flex-direction: column
     justify-content: space-between
     align-items: center
-    gap: 60rem
+    gap: 35rem
     +media(576)
         flex-direction: row
     .about-text
         font-size: 16rem
         line-height: 32rem
         color: #FFFFFF
+        +media(576)
+            width: 65%
+
     h3
         padding: 15rem 0
     p
         opacity: 0.5
-    img
-        max-width: 90%
-        // order: -1
+    .my-photo
+        width: 100%
+        img
+            // position: absolute
+            // top: 0
+            // left: 0
         +media(576)
             order: 0
-            max-width: 40%
-        
+            width: 35%
+// canvas  
+//    width:934px
+//    height:922px
+       
 .technology
     .wrapper
         justify-content: space-between
@@ -500,7 +526,9 @@ img
         top: 20%
         transform: translateX(-50%)
 .portfolio-text
+    position: relative
     margin-bottom: 65rem
+    z-index: 1
     .title
         margin-bottom: 30rem
         font-weight: 500
@@ -559,7 +587,9 @@ img
     line-height: 32rem
     color: $mainGray
 .contact-form
-    background: url('../img/LineBackground.png') 50% 50% no-repeat #1E1E1E
+    background: url('../img/LineBackground.png') 50% 50% #1E1E1E
+    background-repeat: no-repeat
+    background-size: cover
     .wrapper
         padding-bottom: 20%
         +media(1140)
@@ -576,6 +606,8 @@ form
     max-width: 540rem
     flex-direction: column
     align-items: center
+    label
+        width: 100%
     input,
     textarea
         background-color: transparent
