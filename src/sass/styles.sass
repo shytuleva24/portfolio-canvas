@@ -56,7 +56,7 @@ img
     margin: 0 auto
     max-width: 90%
     +media(1170)
-        max-width: 1140rem
+        max-width: 70%
 .flex
     display: flex
 .title
@@ -107,8 +107,8 @@ img
         transform: translateX(75%)
     +media(576)
         transform: translateX(50%)
-    +media(1400)
-        display: none
+    // +media(1400)
+    //     display: none
 .circle1
     top: 0
     left: 0
@@ -261,15 +261,15 @@ img
 //     &:hover:after
 //         +media(768)
 //             width: 100%
-#drawingCanvas 
-    display: none
-    +media(1400)
-        display: block
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
+#canvas 
+    // display: none
+    // +media(1400)
+    //     display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 
 
 .menu-body
@@ -308,45 +308,54 @@ img
 //     width: 100rem
 
 
-.home-content
-    position: absolute
-    width: 100%
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    justify-content: space-between
-    align-items: center
-    .home-title 
-        +media(680)
-            margin-right: 100rem
+// .home-content
+//     position: absolute
+//     width: 100%
+//     top: 50%
+//     left: 50%
+//     transform: translate(-50%, -50%)
+//     justify-content: space-between
+//     align-items: center
+//     .home-title 
+//         +media(680)
+//             margin-right: 100rem
 
-    h1
-        margin-bottom: 30rem
-        font-style: normal
-        font-weight: 700
-        font-size: 80rem
-        line-height: 87.33%
-        color: $mainGrayBlue
-        letter-spacing: -0.025em
-        span 
-            color: $mainLime
-            font-size: 150rem
-        +media(992)
-            font-size: 100rem
-    p
-        margin-bottom: 50rem
-        font-size: 24rem
-        line-height: 125%
-        color: $mainGray
+//     h1
+//         margin-bottom: 30rem
+//         font-style: normal
+//         font-weight: 700
+//         font-size: 80rem
+//         line-height: 87.33%
+//         color: $mainGrayBlue
+//         letter-spacing: -0.025em
+//         span 
+//             color: $mainLime
+//             font-size: 150rem
+//         +media(992)
+//             font-size: 100rem
+//     p
+//         margin-bottom: 50rem
+//         font-size: 24rem
+//         line-height: 125%
+//         color: $mainGray
+.home-container
     .home-illustration
         display: none
         transition: all .1s linear
         // width: 40%
-        max-width: 546rem
+        max-width: 500rem
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
         +media(680)
             display: block
-        +media(1400)
-            display: none
+        // +media(1400)
+            // display: none
+    .button
+        position: absolute
+        left: 0
+        top: 75%
 .about
     background: url('../img/LineBackground.png') 50% 50% #1E1E1E
     background-repeat: no-repeat
