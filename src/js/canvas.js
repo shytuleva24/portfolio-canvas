@@ -94,10 +94,6 @@ window.addEventListener('load', function () {
                 this.mouse.x = e.x;
                 this.mouse.y = e.y;
             });
-            document.querySelector('#homePage').addEventListener("touchmove", e => {
-                this.mouse.x = e.x;
-                this.mouse.y = e.y;
-            });
         }
         /* Examples of analogous combinations:
         Violet, blue, and teal.
