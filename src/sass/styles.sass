@@ -115,23 +115,8 @@ img
     width: 400rem
     height: 400rem
     transform: translate(-50%, -50%)
-.circle2
-    width: 100rem
-    height: 100rem
-    top: 30%
-    left: 10%
-    display: none
-    +media(576)
-        display: block
-
-.circle3
-    width: 130rem
-    height: 130rem
-    top: 30%
-    left: 40%
-    display: none
-    +media(470)
-        display: block
+    +media(680)
+        display: none
 .home-container
     padding: 0
     height: 100vh
@@ -262,14 +247,15 @@ img
 //         +media(768)
 //             width: 100%
 #canvas 
-    // display: none
-    // +media(1400)
-    //     display: block
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
+    display: none
+    +media(680)
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
 
 
 .menu-body
@@ -304,40 +290,29 @@ img
         +media(575)
             width: calc(100% + 17rem)
 
-// .logo
-//     width: 100rem
-
-
-// .home-content
-//     position: absolute
-//     width: 100%
-//     top: 50%
-//     left: 50%
-//     transform: translate(-50%, -50%)
-//     justify-content: space-between
-//     align-items: center
-//     .home-title 
-//         +media(680)
-//             margin-right: 100rem
-
-//     h1
-//         margin-bottom: 30rem
-//         font-style: normal
-//         font-weight: 700
-//         font-size: 80rem
-//         line-height: 87.33%
-//         color: $mainGrayBlue
-//         letter-spacing: -0.025em
-//         span 
-//             color: $mainLime
-//             font-size: 150rem
-//         +media(992)
-//             font-size: 100rem
-//     p
-//         margin-bottom: 50rem
-//         font-size: 24rem
-//         line-height: 125%
-//         color: $mainGray
+.home-title 
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    +media(680)
+        display: none
+    h1
+        margin-bottom: 30rem
+        font-style: normal
+        font-weight: 700
+        font-size: 80rem
+        line-height: 87.33%
+        color: $mainGrayBlue
+        letter-spacing: -0.025em
+        span 
+            color: $mainLime
+            font-size: 150rem
+    p
+        margin-bottom: 50rem
+        font-size: 24rem
+        line-height: 125%
+        color: $mainGray
 .home-container
     .home-illustration
         display: none
@@ -422,9 +397,6 @@ img
         +media(576)
             order: 0
             width: 35%
-// canvas  
-//    width:934px
-//    height:922px
        
 .technology
     .wrapper

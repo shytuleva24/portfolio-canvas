@@ -195,5 +195,12 @@ window.addEventListener('load', function () {
         canvas.height = window.innerHeight;
         effect = new Effect(ctx, canvas.width, canvas.height);
         effect.wrapText(text);
+        if (canvas.width > 780) {
+            drawArc(window.innerWidth / 6, 350, 47, 0, 360, false, "#FFD247");
+            drawArc(window.innerWidth / 1.65, 350, 70, 0, 360, false, "#FFD247");
+            drawArc(window.innerWidth / 2, window.innerHeight / 2, 20, 0, 360, false, "#13CC00");
+        }
+    
+        drawArc(0, 0, 250, 0, 360, false, "#FFD247", "#FFD247");    
     });
 });
